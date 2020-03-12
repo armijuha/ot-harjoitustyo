@@ -7,4 +7,4 @@ Sä *ainut* oot jonka tiedän hellästi tekevän mulle niin.
  
 [komentorivi.txt](https://github.com/armijuha/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
-*Lisämuutos tässä, _paikallisesti_ näpytellen.*
+_Lisämuutosta tässä, **paikallisesti** näpytellen._
