@@ -1,0 +1,113 @@
+commit 8cf226290651f03d9cebb1394fbce75af99625a0
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Wed Mar 11 10:02:45 2020 +0200
+
+    file1 poistettu, file2 -> file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit acbf3c71d1cf2c309559821949004225dfcb8f67
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Wed Mar 11 07:41:00 2020 +0200
+
+    file3 muutettu
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 87b4b694aa746b6135f45d03f739925defdeb09e
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Wed Mar 11 07:17:01 2020 +0200
+
+    tekstimuutos eka.txt ja kolmas.txt
+
+ eka.txt    | 2 +-
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit b64569eebdd153764d1056d509ee5f829642df5a
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Wed Mar 11 07:10:36 2020 +0200
+
+    tiedosto.txt nimi vaihdettu -> eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4340309c200d473a287139ddbc02867ff24444ec
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Wed Mar 11 07:06:39 2020 +0200
+
+    toinen.txt poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 374dbe6583f0e7839dda87d20d2a2e122eb0b577
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Wed Mar 11 07:02:16 2020 +0200
+
+    paljon tekstiä poistettu, vähän lisätty
+
+ tiedosto.txt | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+
+commit 4412a22206c4a4489eae8b9bec433acbe4bf1be4
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Wed Mar 11 06:57:04 2020 +0200
+
+    paljon tekstiä lisätty
+
+ tiedosto.txt | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+commit f06b5754e906902510ebf544381d59cdb0e1e358
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Tue Mar 10 22:47:20 2020 +0200
+
+    stuff hakemisto ja roinaa.txt lisätty
+
+ stuff/roinaa.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 047c811f8ff46f1891392fc7bad09e9b714bc2ad
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Tue Mar 10 22:43:33 2020 +0200
+
+    toinen.txt ja kolmas.txt muutettu
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit bb67c35beec99bb9bc2de6a4d89530d1df042f87
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Tue Mar 10 22:36:29 2020 +0200
+
+    kolmas.txt lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 34d98f7851dde43cc6e48074ce6a9c1be7c68b30
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Tue Mar 10 17:03:14 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit e42a642f456c2364aa9fe1f13141ef965cca42b3
+Author: Juha Arminen <juha.arminen@helsinki.fi>
+Date:   Tue Mar 10 16:59:00 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
