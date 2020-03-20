@@ -1,4 +1,4 @@
-## Lammitysmuotolaskuri
+## Lämmitysmuotolaskuri
 
 ### Dokumentointi
 
