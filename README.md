@@ -1,7 +1,5 @@
-## Otsikko ##
+## README ##
 
-**Lue mua se tee**, yön kylmä pakenee.
-Sä *ainut* oot jonka tiedän hellästi tekevän mulle niin.
 
 [Vaatimusmäärittely](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
