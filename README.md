@@ -14,10 +14,10 @@ Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaa
 
 Testit suoritetaan komennolla
 
-' mvn test '
+'<mvn test>'
 
 Testikattavuusraportti luodaan komennolla
 
-' mvn jacoco:report '
+'<mvn jacoco:report>'
 
 Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto target/site/jacoco/index.html
