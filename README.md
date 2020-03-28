@@ -8,3 +8,16 @@ Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaa
 
 [Työaikakirjanpito](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
+###Komentorivitoiminnot
+
+####Testaus
+
+Testit suoritetaan komennolla
+
+> mvn test
+
+Testikattavuusraportti luodaan komennolla
+
+> mvn jacoco:report
+
+Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto target/site/jacoco/index.html
