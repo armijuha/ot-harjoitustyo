@@ -8,9 +8,9 @@ Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaa
 
 [Työaikakirjanpito](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
-###Komentorivitoiminnot
+### Komentorivitoiminnot
 
-####Testaus
+#### Testaus
 
 Testit suoritetaan komennolla
 
