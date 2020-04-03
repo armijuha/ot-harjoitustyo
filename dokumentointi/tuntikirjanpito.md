@@ -8,3 +8,4 @@ päivä | aika [h] | mitä tein
 28.3.2020 | 2 | ensimmäisten testien toimintakuntoon saattaminen
 1.4.2020  | 3 | pakkausrakenteen muokkaus ja käyttöliittymän erottaminen omaksi luokaksi
 2.3.2020  | 2 | käyttöliittymän parannus ja uusi luokka ilmalämpöpumpulle
+3.3.2020  | 4 | tietokantojen ja DAO:n opiskelu harjoitustyön suunniteltua muokkausta varten
