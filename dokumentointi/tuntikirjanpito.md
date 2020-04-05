@@ -9,4 +9,5 @@ päivä | aika [h] | mitä tein
 1.4.2020  | 3 | pakkausrakenteen muokkaus ja käyttöliittymän erottaminen omaksi luokaksi
 2.3.2020  | 2 | käyttöliittymän parannus ja uusi luokka ilmalämpöpumpulle
 3.3.2020  | 3 | tietokantojen ja DAO:n opiskelu harjoitustyön tulevaa muokkausta varten
-4.3.2020  | 4 | testikattavuuden lisäys ja checkstylen käyttöönotto
+4.3.2020  | 3 | testikattavuuden lisäys ja checkstylen käyttöönotto
+5.2.2020  | 2 | SSH-ongelmien ratkaisu ja luokkakaavion lisäys
