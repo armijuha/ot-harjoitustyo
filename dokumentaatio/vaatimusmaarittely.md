@@ -24,7 +24,7 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli normaali käyttäjä. Suur
 * Käyttäjä voi syöttää oman öljynsä hinnan per litra.
 * Käyttäjä voi syöttää oman polttopuunsa lämpöarvon sekä hinnan per heittokuutio.
 * Järjestelmä antaa suosituksen edullisimmasta lämmitysmuodosta perustuen näiden hintaeroon.
-* Käyttäjä voi kirjautua järjestemästä ulos.
+* Käyttäjä voi kirjautua järjestelmästä ulos.
 
 ## Jatkokehitysideoita
 
@@ -32,4 +32,4 @@ Järjestelmää voidaan jatkossa täydentää ao. ominaisuuksilla.
 * Salasanan vaatiminen sisäänkirjautuessa.
 * Lämpöarvot eri puulajeille voisivat olla järjestelmässä valmiina, jolloin valittaisiin esim. koivu tai kuusi.
 * Pörssisähköä käyttäville olisi hieno ominaisuus hakea sähkön hetkellinen hinta automaattisesti, toteutus voi olla hankalaa.
-* Ilmalämpöpumpun lisäys, jolloin tarvitaan tietoa ainakin ulkoilman lämpötilasta sekä pumpun hyötysuhdearvoista.
+* Ilmalämpöpumpun lisäys, jolloin tarvitaan tietoa ainakin pumpun hyötysuhdearvoista ja ehkä myös ulkoilman lämpötilasta.
