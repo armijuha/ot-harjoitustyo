@@ -12,6 +12,11 @@ Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaa
 
 ### Komentorivitoiminnot
 
+#### Ohjelman suoritus terminaalista
+
+Projektin koodin pystyy suorittamaan komennolla 
+> mvn compile exec:java -Dexec.mainClass=fi.lammitysmuotolaskuri.logics.Main
+
 #### Testaus
 
 Testit suoritetaan komennolla
