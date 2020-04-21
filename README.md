@@ -17,6 +17,9 @@ Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaa
 Projektin koodin pystyy suorittamaan komennolla 
 > mvn compile exec:java -Dexec.mainClass=fi.lammitysmuotolaskuri.logics.Main
 
+Jar-tiedostosta ohjelman voi suorittaa komennolla
+> java -jar Lammitysmuotolaskuri-1.0-SNAPSHOT.jar
+
 #### Testaus
 
 Testit suoritetaan komennolla
