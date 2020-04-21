@@ -17,7 +17,7 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli normaali käyttäjä. Suur
 * Käyttäjä voi syöttää oman sähköenergiansa sekä siirron tämänhetkisen hinnan per kWh. TEHTY
 * Käyttäjä voi syöttää oman öljynsä hinnan per litra sekä öljyn lämpöarvon ja polttamisen hyötysuhteen. TEHTY
 * Käyttäjä voi syöttää oman polttopuunsa lämpöarvon ja hinnan per heittokuutio sekä takan hyötysuhteen. TEHTY
-* Kayttäjä voi luoda järjestelmään käyttäjätunnuksen joka täytyy olla uniikki. TEHTY (mutta ei vielä uniiki)
+* Kayttäjä voi luoda järjestelmään käyttäjätunnuksen joka täytyy olla uniikki. TEHTY (mutta ei vielä uniikki)
 * Käyttäjä voi kirjautua järjestelmään syöttämällä olemassa olevan käyttäjätunnuksen. Järjestelmä ilmoittaa jos käyttäjää ei ole olemassa.
 
 ### Kirjautumisen jälkeen
