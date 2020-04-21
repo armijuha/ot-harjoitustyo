@@ -17,7 +17,9 @@ Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaa
 Projektin koodin pystyy suorittamaan komennolla 
 > mvn compile exec:java -Dexec.mainClass=fi.lammitysmuotolaskuri.logics.Main
 
-Jar-tiedostosta ohjelman voi suorittaa komennolla
+Jar-tiedoston voi luoda komennolla
+> mvn package
+jolloin saadun tiedoston voi edelleen suorittaa komennolla
 > java -jar Lammitysmuotolaskuri-1.0-SNAPSHOT.jar
 
 #### Testaus
@@ -31,3 +33,9 @@ Testikattavuusraportti luodaan komennolla
 > mvn jacoco:report
 
 Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto target/site/jacoco/index.html
+
+#### Checkstyle
+
+Checkstyle tarkastelun voi suorittaa komennolla
+> mvn jxr:jxr checkstyle:checkstyle
+
