@@ -13,4 +13,4 @@ päivä | aika [h] | mitä tein
 5.4.2020  | 2 | SSH-ongelmien ratkaisu ja luokkakaavion lisäys
 17.4.2020 | 4 | tietokantojen opiskelu, niihin liittyvän koodin kirjoitus ja testaus
 19.4.2020 | 5 | tietokantojen opiskelu, niihin liittyvän koodin kirjoitus ja testaus
-21.4.2020 | 3 | Puuttuvien toimintojen lisääminen käyttöliittymään, testikattavuuden parantaminen, bugien korjaus
+21.4.2020 | 3 | puuttuvien toimintojen lisääminen käyttöliittymään, testikattavuuden parantaminen, bugien korjaus
