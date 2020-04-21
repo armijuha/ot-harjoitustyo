@@ -3,13 +3,13 @@ package fi.lammitysmuotolaskuri.logics;
 public class Oil {
 
     private double price;
-    private double energyContent;
     private double efficiency;
+    private double energyContent;
 
     public Oil() {
         this.price = 0.74; //per litra
-        this.energyContent = 10; //kWh per litra
         this.efficiency = 0.9;
+        this.energyContent = 10; //kWh per litra
     }
 
     public double countEnergyPrice() {

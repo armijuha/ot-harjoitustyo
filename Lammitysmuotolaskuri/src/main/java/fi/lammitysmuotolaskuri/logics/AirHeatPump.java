@@ -9,9 +9,8 @@ public class AirHeatPump {
         this.efficiency = 3;
     }
     
-    public double countEnergyPrice() {
-        ElectricHeating e = new ElectricHeating();
-        double overallPrice = (e.getPrice() + e.getTransferPrice()) / this.efficiency;
+    public double countEnergyPrice(double electricPrice) {
+        double overallPrice = electricPrice / this.efficiency;
         return overallPrice;
     }
 

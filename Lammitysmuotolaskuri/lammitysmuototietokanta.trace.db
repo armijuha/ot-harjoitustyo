@@ -1,0 +1,68 @@
+2020-04-19 12:21:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "LAMMITYSMUOTO" already exists; SQL statement:
+CREATE TABLE Lammitysmuoto (id serial, name varchar(255),elprice numeric(5,2)); [42101-199]
+2020-04-19 12:23:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parameter "#1" is not set; SQL statement:
+SELECT * FROM Lammitysmuoto WHERE name = ? [90012-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:587)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:94)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:180)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:144)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:115)
+	at fi.lammitysmuotolaskuri.dao.UserDao.read(UserDao.java:40)
+	at fi.lammitysmuotolaskuri.ui.UserInterface.loadData(UserInterface.java:107)
+	at fi.lammitysmuotolaskuri.ui.UserInterface.start(UserInterface.java:65)
+	at fi.lammitysmuotolaskuri.logics.Main.main(Main.java:26)
+2020-04-20 10:56:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Parameter "#1" is not set; SQL statement:
+SELECT * FROM Lammitysmuoto WHERE name = ? [90012-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:587)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:94)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:180)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:144)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:115)
+	at fi.lammitysmuotolaskuri.dao.UserDao.read(UserDao.java:40)
+	at fi.lammitysmuotolaskuri.ui.UserInterface.loadData(UserInterface.java:107)
+	at fi.lammitysmuotolaskuri.ui.UserInterface.start(UserInterface.java:65)
+	at fi.lammitysmuotolaskuri.logics.Main.main(Main.java:26)
+2020-04-20 10:58:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "pera"; SQL statement:
+SELECT * FROM Lammitysmuoto WHERE name = ? [22018-199]
+2020-04-20 11:08:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Method is not allowed for a query. Use execute or executeQuery instead of executeUpdate; SQL statement:
+SELECT * FROM Lammitysmuoto WHERE name = ? [90001-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.Prepared.update(Prepared.java:217)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at fi.lammitysmuotolaskuri.dao.UserDao.read(UserDao.java:47)
+	at fi.lammitysmuotolaskuri.ui.UserInterface.loadData(UserInterface.java:108)
+	at fi.lammitysmuotolaskuri.ui.UserInterface.start(UserInterface.java:65)
+	at fi.lammitysmuotolaskuri.logics.Main.main(Main.java:27)
+2020-04-20 12:31:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "electrictrasferprice" not found [42122-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3188)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3287)
+	at org.h2.jdbc.JdbcResultSet.getDouble(JdbcResultSet.java:750)
+	at fi.lammitysmuotolaskuri.dao.UserDao.read(UserDao.java:57)
+	at fi.lammitysmuotolaskuri.ui.UserInterface.loadData(UserInterface.java:108)
+	at fi.lammitysmuotolaskuri.ui.UserInterface.start(UserInterface.java:65)
+	at fi.lammitysmuotolaskuri.logics.Main.main(Main.java:27)
