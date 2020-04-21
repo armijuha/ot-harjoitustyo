@@ -2,6 +2,9 @@
 
 Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaan useammalla lämmönlähteellä. Sovelluksen avulla käyttäjä voi laskea edullisimman lämmitysmuodon, eli esim. onko kannattavampaa polttaa puita takassa vai käyttää sähköä.
 
+### Release viikko 5
+[Viikon 5 release](https://github.com/armijuha/ot-harjoitustyo/releases/tag/viikko5)
+
 ### Dokumentaatio
 
 [Arkkitehtuuri](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
