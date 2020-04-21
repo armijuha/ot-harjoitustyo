@@ -19,6 +19,7 @@ Projektin koodin pystyy suorittamaan komennolla
 
 Jar-tiedoston voi luoda komennolla
 > mvn package
+
 jolloin saadun tiedoston voi edelleen suorittaa komennolla
 > java -jar Lammitysmuotolaskuri-1.0-SNAPSHOT.jar
 
