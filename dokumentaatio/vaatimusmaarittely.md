@@ -14,6 +14,7 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli normaali käyttäjä. Suur
 
 ### Ennen kirjautumista
 
+* Laskurin kaikki toiminnallisuus poislukien omien tietojen tallennus ja lataus on heti käytössä ilman kirjautumista. TEHTY
 * Käyttäjä voi syöttää oman sähköenergiansa sekä siirron tämänhetkisen hinnan per kWh. TEHTY
 * Käyttäjä voi syöttää oman öljynsä hinnan per litra sekä öljyn lämpöarvon ja polttamisen hyötysuhteen. TEHTY
 * Käyttäjä voi syöttää oman polttopuunsa lämpöarvon ja hinnan per heittokuutio sekä takan hyötysuhteen. TEHTY
@@ -30,5 +31,6 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli normaali käyttäjä. Suur
 Järjestelmää voidaan jatkossa täydentää ao. ominaisuuksilla.
 * Salasanan vaatiminen sisäänkirjautuessa.
 * Lämpöarvot eri puulajeille voisivat olla järjestelmässä valmiina, jolloin valittaisiin esim. koivu tai kuusi.
-* Pörssisähköä käyttäville olisi hieno ominaisuus hakea sähkön hetkellinen hinta automaattisesti, toteutus voi olla hankalaa.
-* Ilmalämpöpumpun lisäys, jolloin tarvitaan tietoa ainakin pumpun hyötysuhdearvoista ja ehkä myös ulkoilman lämpötilasta. TEHTY
+* Pörssisähköä käyttäville olisi hieno ominaisuus hakea sähkön hetkellinen hinta automaattisesti, toteutus voi olla hankalaa(?).
+* Ilmalämpöpumpun lisäys, jolloin tarvitaan tietoa ainakin pumpun hyötysuhdearvoista ja ehkä myös ulkoilman lämpötilasta. TEHTY (pelkällä hyötysuhteella)
+* Käyttäjän talon koko ja energialuokka mahdollistaisi suoraan arvion päivä- tai vuosikohtaisesta lämmitysenergian hinnasta eri lämmitysmuodoilla.
