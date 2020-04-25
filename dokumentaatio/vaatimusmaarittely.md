@@ -33,5 +33,5 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli normaali käyttäjä. Suur
 Järjestelmää voidaan jatkossa täydentää ao. ominaisuuksilla.
 * Lämpöarvot eri puulajeille voisivat olla järjestelmässä valmiina, jolloin valittaisiin esim. koivu tai kuusi.
 * Pörssisähköä käyttäville olisi hieno ominaisuus hakea sähkön hetkellinen hinta automaattisesti, toteutus voi olla hankalaa(?).
-* Ilmalämpöpumpun hyötysuhteen määritettely ulkoilman lämpötilasta. Pumpun malli ja sisäilman lämpötila vaikuttavat toki myös.
+* Ilmalämpöpumpun hyötysuhteen määrittely ulkoilman lämpötilasta. Pumpun malli ja sisäilman lämpötila vaikuttavat toki myös.
 * Käyttäjän talon koko ja energialuokka mahdollistaisi suoraan arvion päivä- tai vuosikohtaisesta lämmitysenergian hinnasta eri lämmitysmuodoilla.
