@@ -19,9 +19,9 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli normaali käyttäjä. Suur
 * Käyttäjä voi syöttää oman öljynsä hinnan per litra sekä öljyn lämpöarvon ja polttamisen hyötysuhteen.
 * Käyttäjä voi syöttää oman polttopuunsa lämpöarvon ja hinnan per heittokuutio sekä takan hyötysuhteen.
 * Käyttäjä voi syöttää ilmalämpöpumpun hyötysuhteen.
-* Kayttäjä voi luoda järjestelmään käyttäjätunnuksen joka täytyy olla uniikki. VALMIS vk6 release, tietokantatoiminnallisuus ei vielä lopullinen
+* Kayttäjä voi luoda järjestelmään käyttäjätunnuksen joka täytyy olla uniikki. TEHTY vk6 release, tietokantatoiminnallisuus ei vielä lopullinen
 * Käyttäjä voi tunnuksen ja salasanan avulla tallentaa ja ladata tietonsa tietokantaan. Järjestelmä ilmoittaa jos käyttäjää ei ole olemassa.
-* Ohjelma ei kaadu käyttäjän virheellisiin syötteisiin vaan ne käsitellään ja ohjeistetaan käyttäjää. VALMIS vk6 release
+* Ohjelma ei kaadu käyttäjän virheellisiin syötteisiin vaan ne käsitellään ja ohjeistetaan käyttäjää. TEHTY vk6 release
 
 ### Kirjautumisen jälkeen
 
