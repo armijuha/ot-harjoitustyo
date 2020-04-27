@@ -4,6 +4,7 @@ Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaa
 
 ### Release viikko 5 ja 6
 [Viikon 5 release](https://github.com/armijuha/ot-harjoitustyo/releases/tag/viikko5)
+
 [Viikon 6 release](https://github.com/armijuha/ot-harjoitustyo/releases/tag/viikko6)
 
 ### Dokumentaatio
