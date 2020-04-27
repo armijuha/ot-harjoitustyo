@@ -9,7 +9,7 @@ Ohjelmassa on kolmitasoinen kerrosarkkitehtuuri alla näkyvällä pakkausrakente
 Tekstipohjainen käyttöliittymä ainakin toistaiseksi. Käyttöliittymä on erotettu sovelluslogiikasta ja kutsuu käyttäjän antamilla parametreillä sovelluslogiikan toteuttavien luokkien metodeja.
 
 ## Sovelluslogiikka 
-Sovelluslogiikka muodostuu luokista User, ElectricHeating, Firewood, Oil ja AirHeatPump. Alla ohjelman osien suhdetta kuvaava luokkakaavio.
+Sovelluslogiikka muodostuu luokista User, ElectricHeating, Firewood, Oil ja AirHeatPump. Luokkaa User tarvitaan vain pysyväistalletuksen yhteydessä, joten jos käyttäjä ei halua pysyväistallentaa tai ladata tietojaan tietokantaan sitä ei käytetä. Muut sovelluslogiikan luokat vastaavat nimensä mukaisen lämmitysenergialähteen hinnan laskennasta ja siihen liittyvistä tiedoista. Alla ohjelman osien suhdetta kuvaava luokkakaavio.
 
 ![Alt Text](https://yuml.me/6da124cd.jpg)
 
