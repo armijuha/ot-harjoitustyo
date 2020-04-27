@@ -78,5 +78,29 @@ public class UserTest {
 
         assertEquals(10, u.getOilEnergyContent(), 0.0001);
     }
+    
+    @Test
+    public void constuctorSetsFirewoodPriceCorrectly() {
+
+        assertEquals(80, f.getPrice(), 0.0001);
+    }
+    
+    @Test
+    public void constuctorSetsFirewoodEfficiencyCorrectly() {
+
+        assertEquals(0.8, f.getEfficiency(), 0.0001);
+    }
+    
+     @Test
+    public void constuctorSetsFirewoodEnergyContentCorrectly() {
+
+        assertEquals(1010, f.getEnergyContent(), 0.0001);
+    }
+    
+    @Test
+    public void constuctorSetsAirHeatPumpEfficiencyCorrectly() {
+
+        assertEquals(3, p.getEfficiency(), 0.0001);
+    }
 
 }

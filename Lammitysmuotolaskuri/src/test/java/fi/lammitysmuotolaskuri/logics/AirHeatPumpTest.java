@@ -34,6 +34,12 @@ public class AirHeatPumpTest {
     }
 
     @Test
+    public void faultyEfficiencyNotSet() {
+        p.setEfficiency(0);
+        assertEquals(3, p.getEfficiency(), 0.0001);
+    }
+
+    @Test
     public void constuctorSetsEfficiencyCorrectly() {
         assertEquals(3, p.getEfficiency(), 0.0001);
     }

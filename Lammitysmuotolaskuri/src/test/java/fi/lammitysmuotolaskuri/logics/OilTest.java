@@ -41,6 +41,24 @@ public class OilTest {
     }
 
     @Test
+    public void faultyPriceNotSet() {
+        o.setPrice(1500);
+        assertEquals(0.74, o.getPrice(), 0.0001);
+    }
+
+    @Test
+    public void faultyEfficiencyNotSet() {
+        o.setEfficiency(0);
+        assertEquals(0.9, o.getEfficiency(), 0.0001);
+    }
+
+    @Test
+    public void faultyEnergyContentNotSet() {
+        o.setEnergyContent(100.1);
+        assertEquals(10, o.getEnergyContent(), 0.0001);
+    }
+
+    @Test
     public void constuctorSetsEnergyContentCorrectly() {
 
         assertEquals(10, o.getEnergyContent(), 0.001);
@@ -63,7 +81,7 @@ public class OilTest {
         o.setEfficiency(1);
         o.setPrice(1);
         o.setEnergyContent(10);
-        
+
         assertEquals(0.1, o.countEnergyPrice(), 0.0001);
     }
 }

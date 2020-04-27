@@ -1,3 +1,6 @@
+/**
+ * Käyttöliittymä.
+ */
 package fi.lammitysmuotolaskuri.ui;
 
 import java.util.Scanner;
@@ -11,6 +14,9 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Luokka vastaa sovelluksen käyttöliittymästä.
+ */
 public class UserInterface {
 
     private Scanner scanner;
@@ -30,6 +36,10 @@ public class UserInterface {
 
     }
 
+    /**
+     * Metodi kysyy käyttäjältä mitä tehdään eli pyytää syötteen ja kutsuu syötettä vastaavaa metodia.
+     * @throws java.sql.SQLException
+     */
     public void start() throws SQLException {
 
         System.out.println("*************************************************************************");
@@ -47,40 +57,58 @@ public class UserInterface {
                 break;
             } else if (selection.equals("10")) {
                 System.out.print("Anna uusi sähköenergian hinta (euroa per kWh, oletusarvo 0.04): ");
-                double price = Double.parseDouble(scanner.nextLine());
-                electric.setPrice(price);
+                if (checkInputType()) {
+                    double price = Double.parseDouble(scanner.nextLine());
+                    electric.setPrice(price);
+                }
             } else if (selection.equals("11")) {
                 System.out.print("Anna uusi sähkön siirtohinta (euroa per kWh, sisältäen sähköveron, oletusarvo 0.07): ");
-                double transferPrice = Double.parseDouble(scanner.nextLine());
-                electric.setTransferPrice(transferPrice);
+                if (checkInputType()) {
+                    double transferPrice = Double.parseDouble(scanner.nextLine());
+                    electric.setTransferPrice(transferPrice);
+                }
             } else if (selection.equals("20")) {
                 System.out.print("Anna uusi halkojen hinta (euroa per heittokuutio, oletusarvo 80): ");
-                double price = Double.parseDouble(scanner.nextLine());
-                wood.setPrice(price);
+                if (checkInputType()) {
+                    double price = Double.parseDouble(scanner.nextLine());
+                    wood.setPrice(price);
+                }
             } else if (selection.equals("21")) {
                 System.out.print("Anna uusi hyötysuhde takalle (oletusarvo 0.80, hyvä varaava takka): ");
-                double efficiency = Double.parseDouble(scanner.nextLine());
-                wood.setEfficiency(efficiency);
+                if (checkInputType()) {
+                    double efficiency = Double.parseDouble(scanner.nextLine());
+                    wood.setEfficiency(efficiency);
+                }
             } else if (selection.equals("22")) {
                 System.out.print("Anna uusi puun energiasisältö (kWh per heittokuutio, oletusarvo 1010, kuiva koivuklapi): ");
-                double energyContent = Double.parseDouble(scanner.nextLine());
-                wood.setEnergyContent(energyContent);
+                if (checkInputType()) {
+                    double energyContent = Double.parseDouble(scanner.nextLine());
+                    wood.setEnergyContent(energyContent);
+                }
             } else if (selection.equals("30")) {
                 System.out.print("Anna uusi öljyn/polttonesteen hinta (euroa per litra, oletusarvo 0.74): ");
-                double price = Double.parseDouble(scanner.nextLine());
-                oil.setPrice(price);
+                if (checkInputType()) {
+                    double price = Double.parseDouble(scanner.nextLine());
+                    oil.setPrice(price);
+                }
             } else if (selection.equals("31")) {
                 System.out.print("Anna uusi öljyn/polttonesteen polttamisen hyötysuhde (oletusarvo 0.90): ");
-                double efficiency = Double.parseDouble(scanner.nextLine());
-                oil.setEfficiency(efficiency);
+                if (checkInputType()) {
+                    double efficiency = Double.parseDouble(scanner.nextLine());
+                    oil.setEfficiency(efficiency);
+                }
             } else if (selection.equals("32")) {
                 System.out.print("Anna uusi öljyn/polttonesteen energiasisältö (kWh per litra, oletusarvo 10): ");
-                double energyContent = Double.parseDouble(scanner.nextLine());
-                oil.setEnergyContent(energyContent);
+                if (checkInputType()) {
+                    double energyContent = Double.parseDouble(scanner.nextLine());
+                    oil.setEnergyContent(energyContent);
+                }
             } else if (selection.equals("40")) {
                 System.out.print("Anna pumpun uusi hyötysuhde: ");
-                double efficiency = Double.parseDouble(scanner.nextLine());
-                pump.setEfficiency(efficiency);
+                if (checkInputType()) {
+                    double efficiency = Double.parseDouble(scanner.nextLine());
+                    pump.setEfficiency(efficiency);
+                }
             } else if (selection.equals("1")) {
                 printPrices();
             } else if (selection.equals("2")) {
@@ -96,6 +124,9 @@ public class UserInterface {
         System.out.println("Kiitos käynnistä, tervetuloa uudestaan!");
     }
 
+    /**
+     * Tulostaa ruudulle ohjeen joka kertoo komennot.
+     */
     public void printGuide() {
 
         System.out.println("");
@@ -115,9 +146,26 @@ public class UserInterface {
         System.out.println("40 Muuta ilmalämpöpumpun hyötysuhdetta");
         System.out.println("x Lopeta ohjelma");
     }
-
+    /**
+     * Metodi kertoo onko käyttäjän syöte oikeaa tyyppiä (double).
+     * 
+     * @return true jos syöte on double tyyppiä
+     */
+    public boolean checkInputType() {
+        if (scanner.hasNextDouble()) {
+            return true;
+        } else {
+            System.out.println("Virheellinen syöte, tarvitaan desimaaliluku (käytä desimaalierottimena pistettä)");
+        }
+        String cleaningAway = scanner.nextLine();
+        return false;
+    }
+    
+    /**
+     * Tulostaa ruudulle lämmitysmuotojen hinnat per kWh.
+     */
     public void printPrices() {
-        
+
         Double ePrice = electric.countEnergyPrice();
         System.out.println("kWh-hinta polttopuulla: " + wood.countEnergyPrice() + " senttiä");
         System.out.println("kWh-hinta sähköllä: " + ePrice + " senttiä");
@@ -125,20 +173,38 @@ public class UserInterface {
         System.out.println("kWh-hinta ilmalämpöpumpulla: " + pump.countEnergyPrice(ePrice) + " senttiä");
     }
 
+    /**
+     * Tallentaa käyttäjän nimen ja hintatiedot pysyväismuistiin tietokantaan.
+     * @throws SQLException 
+     */
     public void saveData() throws SQLException {
         System.out.println("Anna käyttäjänimi jolla hintatietosi tallennetaan: ");
         String name = scanner.nextLine();
-        User user = new User(name, electric.getPrice(), electric.getTransferPrice(), wood.getPrice(), wood.getEfficiency(), wood.getEnergyContent(), oil.getPrice(), oil.getEfficiency(), oil.getEnergyContent(), pump.getEfficiency());
-        dao.create(user);
-        System.out.println("Kiitos " + name + ", hintatietosi on nyt tallennettu.");
+        if (!dao.check(name)) {
+            User user = new User(name, electric.getPrice(), electric.getTransferPrice(), wood.getPrice(), wood.getEfficiency(), wood.getEnergyContent(), oil.getPrice(), oil.getEfficiency(), oil.getEnergyContent(), pump.getEfficiency());
+            dao.create(user);
+            System.out.println("Kiitos " + name + ", hintatietosi on nyt tallennettu.");
+        } else {
+            System.out.println("Käyttäjänimi " + name + " on jo käytössä. Valitse toinen käyttäjänimi kiitos!");
+        }
+
     }
 
+    /**
+     * Lataa käyttäjän hintatiedot pysyväismuistista tietokannasta.
+     * @throws SQLException
+     */
     public void loadData() throws SQLException {
         System.out.println("Anna käyttäjänimi jolla hintatietosi on tallennettu: ");
         String name = scanner.nextLine();
-        User user = dao.read(name);
-        System.out.println("Kiitos " + name + ", hintatietosi on nyt haettu.");
-        electric.setPrice(user.getElectricPrice());
-        printPrices();
+        if (dao.check(name)) {
+            User user = dao.read(name);
+            System.out.println("Kiitos " + name + ", hintatietosi on nyt haettu.");
+            electric.setPrice(user.getElectricPrice());
+            printPrices();
+        } else {
+            System.out.println("Käyttäjänimeä ei löytynyt, tarkista käyttäjänimi ja yritä uudelleen, kiitos.");
+        }
+
     }
 }

@@ -41,6 +41,18 @@ public class ElectricHeatingTest {
     }
 
     @Test
+    public void faultyPriceNotSet() {
+        e.setPrice(-1);
+        assertEquals(0.04, e.getPrice(), 0.0001);
+    }
+
+    @Test
+    public void faultyTransferPriceNotSet() {
+        e.setTransferPrice(20);
+        assertEquals(0.07, e.getTransferPrice(), 0.0001);
+    }
+
+    @Test
     public void constuctorSetsPriceCorrectly() {
 
         assertEquals(0.04, e.getPrice(), 0.0001);

@@ -1,3 +1,6 @@
+/**
+ * Sovelluslogiikka.
+ */
 
 package fi.lammitysmuotolaskuri.logics;
 

@@ -1,7 +1,11 @@
-
+/**
+ * Sovelluslogiikka.
+ */
 package fi.lammitysmuotolaskuri.logics;
 
-
+/**
+ * Luokka tarjoaa käyttäjän nimen sekä käyttäjän lämmitysenergian hintoihin liittyvät tiedot.
+ */
 public class User {
 
     private String name;

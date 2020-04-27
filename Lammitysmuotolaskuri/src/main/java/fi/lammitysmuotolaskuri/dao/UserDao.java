@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Tietojen pysyväistallennus.
  */
 package fi.lammitysmuotolaskuri.dao;
 
@@ -10,11 +8,15 @@ import java.sql.*;
 import java.util.*;
 
 /**
- *
- * @author armijuha
+ * Luokka vastaa tietojen pysyväistallennuksesta tietokantaan ja tietokantahauista.
  */
 public class UserDao implements Dao<User, Integer> {
-
+    
+    /**
+     * Metodi lisää uuden käyttäjän tietokantaan.
+     * @param user lisättävä käyttäjä
+     * @throws SQLException 
+     */
     @Override
     public void create(User user) throws SQLException {
         Connection conn = DriverManager.getConnection("jdbc:h2:./lammitysmuototietokanta", "sa", "");
@@ -42,6 +44,35 @@ public class UserDao implements Dao<User, Integer> {
         conn.close();
     }
 
+    /**
+     * Metodi tutkii löytyykö käyttäjää tietokannasta
+     * @param name haettavan käyttäjän nimi
+     * @return true jos käyttäjä löytyy
+     * @throws SQLException 
+     */
+    public boolean check(String name) throws SQLException {
+        Connection conn = DriverManager.getConnection("jdbc:h2:./lammitysmuototietokanta", "sa", "");
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Lammitysmuoto WHERE name = ?");
+        stmt.setString(1, name);
+        ResultSet rs = stmt.executeQuery();
+        if (!rs.next()) {
+            stmt.close();
+            rs.close();
+            conn.close();
+            return false;
+        }
+        stmt.close();
+        rs.close();
+        conn.close();
+        return true;
+    }
+
+    /**
+     * Metodi lukee käyttäjän tiedot tietokannasta nimen perusteella.
+     * @param name haettavan käyttäjän nimi
+     * @return käyttäjäolio
+     * @throws SQLException 
+     */
     @Override
     public User read(String name) throws SQLException {
         Connection conn = DriverManager.getConnection("jdbc:h2:./lammitysmuototietokanta", "sa", "");

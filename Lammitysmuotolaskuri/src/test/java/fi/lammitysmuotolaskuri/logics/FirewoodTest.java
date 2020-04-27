@@ -38,6 +38,24 @@ public class FirewoodTest {
     @After
     public void tearDown() {
     }
+    
+     @Test
+    public void faultyPriceNotSet() {
+        f.setPrice(1500);
+        assertEquals(80, f.getPrice(), 0.0001);
+    }
+
+    @Test
+    public void faultyEfficiencyNotSet() {
+        f.setEfficiency(0);
+        assertEquals(0.8, f.getEfficiency(), 0.0001);
+    }
+    
+    @Test
+    public void faultyEnergyContentNotSet() {
+        f.setEnergyContent(20000);
+        assertEquals(1010, f.getEnergyContent(), 0.0001);
+    }
 
      @Test
     public void constuctorSetsPriceCorrectly() {
