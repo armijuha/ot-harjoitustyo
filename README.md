@@ -11,6 +11,8 @@ Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaa
 
 [Vaatimusmäärittely](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
+[Käyttöohje](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 [Työaikakirjanpito](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 ### Komentorivitoiminnot
@@ -43,3 +45,7 @@ Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto target/site/jac
 Checkstyle tarkastelun voi suorittaa komennolla
 > mvn jxr:jxr checkstyle:checkstyle
 
+#### JavaDoc
+
+JavaDoc voidaan generoida komennolla
+> mvn javadoc:javadoc
