@@ -16,5 +16,7 @@ päivä | aika [h] | mitä tein
 21.4.2020 | 3 | puuttuvien toimintojen lisääminen käyttöliittymään, testikattavuuden parantaminen, bugien korjaus
 24.4.2020 | 4 | käyttäjän virheellisten syötteiden käsittely kaikkiin tarpeellisiin luokkiin, kaavioiden päivitys
 25.4.2020 | 4 | testikattavuuden parantaminen, salasanan lisäys käyttäjälle
+26.4.2020 | 3 | JavaDoc kommentointi ja ongelmien selvitys
+27.4.2020 | 2 | alustava arkkitehtuurikuvaus ja käyttöohje
 
-summa 46 tuntia
+summa 51 tuntia
