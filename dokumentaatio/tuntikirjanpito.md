@@ -14,3 +14,7 @@ päivä | aika [h] | mitä tein
 17.4.2020 | 4 | tietokantojen opiskelu, niihin liittyvän koodin kirjoitus ja testaus
 19.4.2020 | 5 | tietokantojen opiskelu, niihin liittyvän koodin kirjoitus ja testaus
 21.4.2020 | 3 | puuttuvien toimintojen lisääminen käyttöliittymään, testikattavuuden parantaminen, bugien korjaus
+24.4.2020 | 4 | käyttäjän virheellisten syötteiden käsittely kaikkiin tarpeellisiin luokkiin, kaavioiden päivitys
+25.4.2020 | 4 | testikattavuuden parantaminen, salasanan lisäys käyttäjälle
+
+summa 46 tuntia

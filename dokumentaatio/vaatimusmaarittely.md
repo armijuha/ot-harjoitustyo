@@ -14,23 +14,24 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli normaali käyttäjä. Suur
 
 ### Ennen kirjautumista
 
-* Laskurin kaikki toiminnallisuus poislukien omien tietojen tallennus ja lataus on heti käytössä ilman kirjautumista. TEHTY
-* Käyttäjä voi syöttää oman sähköenergiansa sekä siirron tämänhetkisen hinnan per kWh. TEHTY
-* Käyttäjä voi syöttää oman öljynsä hinnan per litra sekä öljyn lämpöarvon ja polttamisen hyötysuhteen. TEHTY
-* Käyttäjä voi syöttää oman polttopuunsa lämpöarvon ja hinnan per heittokuutio sekä takan hyötysuhteen. TEHTY
-* Kayttäjä voi luoda järjestelmään käyttäjätunnuksen joka täytyy olla uniikki. TEHTY (mutta ei vielä uniikki)
-* Käyttäjä voi kirjautua järjestelmään syöttämällä olemassa olevan käyttäjätunnuksen. Järjestelmä ilmoittaa jos käyttäjää ei ole olemassa.
+* Laskurin kaikki toiminnallisuus poislukien omien tietojen tallennus ja lataus on heti käytössä ilman kirjautumista.
+* Käyttäjä voi syöttää oman sähköenergiansa sekä siirron tämänhetkisen hinnan per kWh.
+* Käyttäjä voi syöttää oman öljynsä hinnan per litra sekä öljyn lämpöarvon ja polttamisen hyötysuhteen.
+* Käyttäjä voi syöttää oman polttopuunsa lämpöarvon ja hinnan per heittokuutio sekä takan hyötysuhteen.
+* Käyttäjä voi syöttää ilmalämpöpumpun hyötysuhteen.
+* Kayttäjä voi luoda järjestelmään käyttäjätunnuksen joka täytyy olla uniikki. TEHTY vk6 release, tietokantatoiminnallisuus ei vielä lopullinen
+* Käyttäjä voi tunnuksen ja salasanan avulla tallentaa ja ladata tietonsa tietokantaan. Järjestelmä ilmoittaa jos käyttäjää ei ole olemassa.
+* Ohjelma ei kaadu käyttäjän virheellisiin syötteisiin vaan ne käsitellään ja ohjeistetaan käyttäjää. TEHTY vk6 release
 
 ### Kirjautumisen jälkeen
 
-* Käyttäjä näkee oman sähkönsä, öljynsä ja polttopuunsa hinnan, mikäli hän on ne aiemmin syöttänyt. TEHTY 
+* Käyttäjä näkee oman sähkönsä, öljynsä ja polttopuunsa hinnan, mikäli hän on ne aiemmin syöttänyt.
 * Järjestelmä antaa suosituksen edullisimmasta lämmitysmuodosta perustuen näiden hintaeroon.
 
 ## Jatkokehitysideoita
 
 Järjestelmää voidaan jatkossa täydentää ao. ominaisuuksilla.
-* Salasanan vaatiminen sisäänkirjautuessa.
 * Lämpöarvot eri puulajeille voisivat olla järjestelmässä valmiina, jolloin valittaisiin esim. koivu tai kuusi.
 * Pörssisähköä käyttäville olisi hieno ominaisuus hakea sähkön hetkellinen hinta automaattisesti, toteutus voi olla hankalaa(?).
-* Ilmalämpöpumpun lisäys, jolloin tarvitaan tietoa ainakin pumpun hyötysuhdearvoista ja ehkä myös ulkoilman lämpötilasta. TEHTY (pelkällä hyötysuhteella)
+* Ilmalämpöpumpun hyötysuhteen määrittely ulkoilman lämpötilasta. Pumpun malli ja sisäilman lämpötila vaikuttavat toki myös.
 * Käyttäjän talon koko ja energialuokka mahdollistaisi suoraan arvion päivä- tai vuosikohtaisesta lämmitysenergian hinnasta eri lämmitysmuodoilla.
