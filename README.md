@@ -11,7 +11,7 @@ Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaa
 
 [Vaatimusmäärittely](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[Käyttöohje] (https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+[Käyttöohje](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 [Työaikakirjanpito](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
@@ -48,4 +48,4 @@ Checkstyle tarkastelun voi suorittaa komennolla
 #### JavaDoc
 
 JavaDoc voidaan generoida komennolla
-> https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md
+> mvn javadoc:javadoc
