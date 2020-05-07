@@ -19,19 +19,20 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli normaali käyttäjä. Suur
 * Käyttäjä voi syöttää oman öljynsä hinnan per litra sekä öljyn lämpöarvon ja polttamisen hyötysuhteen.
 * Käyttäjä voi syöttää oman polttopuunsa lämpöarvon ja hinnan per heittokuutio sekä takan hyötysuhteen.
 * Käyttäjä voi syöttää ilmalämpöpumpun hyötysuhteen.
-* Kayttäjä voi luoda järjestelmään käyttäjätunnuksen joka täytyy olla uniikki. TEHTY vk6 release, tietokantatoiminnallisuus ei vielä lopullinen
-* Käyttäjä voi tunnuksen ja salasanan avulla tallentaa ja ladata tietonsa tietokantaan. Järjestelmä ilmoittaa jos käyttäjää ei ole olemassa.
-* Ohjelma ei kaadu käyttäjän virheellisiin syötteisiin vaan ne käsitellään ja ohjeistetaan käyttäjää. TEHTY vk6 release
+* Kayttäjä voi luoda järjestelmään käyttäjätunnuksen joka täytyy olla uniikki ja 1-100 merkkiä pitkä.
+* Käyttäjä voi käyttäjätunnuksen avulla tallentaa ja ladata tietonsa tietokantaan. Järjestelmä ilmoittaa jos käyttäjää ei ole olemassa.
+* Ohjelma ei missään tilanteessa voi kaatua käyttäjän virheellisiin syötteisiin vaan ne kaikki käsitellään ja ohjeistetaan käyttäjää.
 
 ### Kirjautumisen jälkeen
 
-* Käyttäjä näkee oman sähkönsä, öljynsä ja polttopuunsa hinnan, mikäli hän on ne aiemmin syöttänyt.
+* Käyttäjä näkee oman sähkönsä, öljynsä ja polttopuunsa hinnan tietokantaan tallentamiensa tietojen perusteella.
 * Järjestelmä antaa suosituksen edullisimmasta lämmitysmuodosta perustuen näiden hintaeroon.
 
 ## Jatkokehitysideoita
 
 Järjestelmää voidaan jatkossa täydentää ao. ominaisuuksilla.
+* Salasanan lisäys onnistuisi melko helposti. Toisaalta käyttäjä voi jo nyt valita hyvin monimutkaisen käyttäjätunnuksen jota on vaikea arvata.
 * Lämpöarvot eri puulajeille voisivat olla järjestelmässä valmiina, jolloin valittaisiin esim. koivu tai kuusi.
-* Pörssisähköä käyttäville olisi hieno ominaisuus hakea sähkön hetkellinen hinta automaattisesti, toteutus voi olla hankalaa(?).
-* Ilmalämpöpumpun hyötysuhteen määrittely ulkoilman lämpötilasta. Pumpun malli ja sisäilman lämpötila vaikuttavat toki myös.
+* Pörssisähköä käyttäville olisi hieno ominaisuus hakea sähkön hetkellinen hinta automaattisesti, esiselvityksen perusteella toteutus saattaisi onnistua Fingridin tarjoaman avoimen datan avulla.
+* Ilmalämpöpumpun hyötysuhteen määrittelyn voisi tehdä ulkoilman lämpötilasta. Pumpun malli ja sisäilman lämpötila vaikuttavat toki myös.
 * Käyttäjän talon koko ja energialuokka mahdollistaisi suoraan arvion päivä- tai vuosikohtaisesta lämmitysenergian hinnasta eri lämmitysmuodoilla.
