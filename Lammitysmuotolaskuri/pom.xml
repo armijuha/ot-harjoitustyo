@@ -40,7 +40,6 @@
                 <configuration>
                     <excludes>
                         <exclude>fi/lammitysmuotolaskuri/ui/*</exclude>
-                        <exclude>fi/lammitysmuotolaskuri/dao/*</exclude>
                     </excludes>
                 </configuration>
                 <executions>

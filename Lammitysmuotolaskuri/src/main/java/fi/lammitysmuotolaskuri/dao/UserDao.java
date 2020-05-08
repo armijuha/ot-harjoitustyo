@@ -8,23 +8,40 @@ import java.sql.*;
 import java.util.*;
 
 /**
- * Luokka vastaa tietojen pysyväistallennuksesta tietokantaan ja tietokantahauista.
+ * Luokka vastaa tietojen pysyväistallennuksesta tietokantaan ja
+ * tietokantahauista.
  */
 public class UserDao implements Dao<User, Integer> {
-    
+
+    /**
+     * Tekee tietokannan nimeltä Lammitysmuoto jos sitä ei ole vielä olemassa.
+     *
+     * @throws SQLException
+     */
+    public UserDao() throws SQLException {
+        Connection conn = DriverManager.getConnection("jdbc:h2:./lammitysmuototietokanta", "sa", "");
+        try {
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Lammitysmuoto");
+            stmt.execute();
+            stmt.close();
+        } catch (Exception e) {
+            conn.prepareStatement("CREATE TABLE Lammitysmuoto (id serial, name varchar(255), electricprice numeric(9,4), electrictransferprice numeric(9,4),"
+                    + " woodprice numeric(9,4), woodefficiency numeric(9,4), woodenergycontent numeric(9,4), oilprice numeric(9,4), oilefficiency numeric(9,4),"
+                    + " oilenergycontent numeric(9,4), pumpefficiency numeric (9,4));").executeUpdate();
+
+        }
+        conn.close();
+    }
+
     /**
      * Metodi lisää uuden käyttäjän tietokantaan.
+     *
      * @param user lisättävä käyttäjä
-     * @throws SQLException 
+     * @throws SQLException
      */
     @Override
     public void create(User user) throws SQLException {
         Connection conn = DriverManager.getConnection("jdbc:h2:./lammitysmuototietokanta", "sa", "");
-        conn.prepareStatement("DROP TABLE Lammitysmuoto IF EXISTS;").executeUpdate();
-        conn.prepareStatement("CREATE TABLE Lammitysmuoto (id serial, name varchar(255), electricprice numeric(9,4), electrictransferprice numeric(9,4),"
-                + " woodprice numeric(9,4), woodefficiency numeric(9,4), woodenergycontent numeric(9,4), oilprice numeric(9,4), oilefficiency numeric(9,4),"
-                + " oilenergycontent numeric(9,4), pumpefficiency numeric (9,4));").executeUpdate();
-
         PreparedStatement stmt = conn.prepareStatement("INSERT INTO Lammitysmuoto"
                 + " (name, electricprice, electrictransferprice, woodprice, woodefficiency, woodenergycontent, oilprice, oilefficiency, oilenergycontent, pumpefficiency)"
                 + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -46,9 +63,10 @@ public class UserDao implements Dao<User, Integer> {
 
     /**
      * Metodi tutkii löytyykö käyttäjää tietokannasta
+     *
      * @param name haettavan käyttäjän nimi
      * @return true jos käyttäjä löytyy
-     * @throws SQLException 
+     * @throws SQLException
      */
     public boolean check(String name) throws SQLException {
         Connection conn = DriverManager.getConnection("jdbc:h2:./lammitysmuototietokanta", "sa", "");
@@ -69,9 +87,10 @@ public class UserDao implements Dao<User, Integer> {
 
     /**
      * Metodi lukee käyttäjän tiedot tietokannasta nimen perusteella.
+     *
      * @param name haettavan käyttäjän nimi
      * @return käyttäjäolio
-     * @throws SQLException 
+     * @throws SQLException
      */
     @Override
     public User read(String name) throws SQLException {
@@ -98,23 +117,37 @@ public class UserDao implements Dao<User, Integer> {
         stmt.close();
         rs.close();
         conn.close();
-
         return u;
     }
 
+    /**
+     * Metodi päivittää uudet tiedot vanhalle käyttäjänimelle, käytännössä vanha
+     * käyttäjä poistetaan ja tehdään uusi samalle nimelle.
+     *
+     * @param user päivitettävä käyttäjä
+     * @throws SQLException
+     */
     @Override
-    public User update(User object) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void update(User user) throws SQLException {
+        delete(user.getName());
+        create(user);
     }
 
+    /**
+     * Metodi poistaa käyttäjän tietokannasta.
+     *
+     * @param name poistettavan käyttäjän nimi
+     * @throws SQLException
+     */
     @Override
-    public void delete(Integer key) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public void delete(String name) throws SQLException {
+        Connection conn = DriverManager.getConnection("jdbc:h2:./lammitysmuototietokanta", "sa", "");
+        PreparedStatement stmt = conn.prepareStatement("DELETE FROM Lammitysmuoto WHERE name = ?");
+        stmt.setString(1, name);
+        stmt.executeUpdate();
+        stmt.close();
+        conn.close();
 
-    @Override
-    public List<User> list() throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

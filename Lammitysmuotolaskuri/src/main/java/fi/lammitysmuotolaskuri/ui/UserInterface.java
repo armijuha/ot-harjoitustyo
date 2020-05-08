@@ -11,8 +11,8 @@ import fi.lammitysmuotolaskuri.logics.Oil;
 import fi.lammitysmuotolaskuri.dao.UserDao;
 import fi.lammitysmuotolaskuri.logics.User;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import java.text.DecimalFormat;
 
 /**
  * Luokka vastaa sovelluksen käyttöliittymästä.
@@ -37,7 +37,9 @@ public class UserInterface {
     }
 
     /**
-     * Metodi kysyy käyttäjältä mitä tehdään eli pyytää syötteen ja kutsuu syötettä vastaavaa metodia.
+     * Metodi kysyy käyttäjältä mitä tehdään eli pyytää syötteen ja kutsuu
+     * syötettä vastaavaa metodia.
+     *
      * @throws java.sql.SQLException
      */
     public void start() throws SQLException {
@@ -45,6 +47,9 @@ public class UserInterface {
         System.out.println("*************************************************************************");
         System.out.println("Lämmitysmuotolaskuri - laskee millä lämmität asuntosi edullisimmin tänään");
         System.out.println("*************************************************************************");
+        System.out.println("");
+        System.out.println("Kaikille hinnoille, hyötysuhteille ja energiasisällöille on annettu oletusarvo.");
+        System.out.println("Kuitenkin vain syöttämällä omat ajantasaiset tietosi voidaan laskea juuri sinulle ja tähän hetkeen edullisin lämmitysmuoto.");
         System.out.println("");
         printGuide();
 
@@ -116,7 +121,11 @@ public class UserInterface {
             } else if (selection.equals("3")) {
                 saveData();
             } else if (selection.equals("4")) {
+                updateData();
+            } else if (selection.equals("5")) {
                 loadData();
+            } else if (selection.equals("6")) {
+                deleteUserData();
             } else {
                 System.out.println("Toimintoa ei löydy, yritä uudelleen");
             }
@@ -133,8 +142,10 @@ public class UserInterface {
         System.out.println("Valitse toiminto syöttämällä jokin seuraavista komennoista: ");
         System.out.println("1 Näytä lämmitysmuotojen hinnat senttiä/kWh");
         System.out.println("2 Tulosta ohjeet näytölle");
-        System.out.println("3 Tallenna muuttamasi hintatiedot omalle käyttäjänimellesi");
-        System.out.println("4 Lataa tallennetut hintatietosi käyttäjänimesi avulla");
+        System.out.println("3 Tee uusi käyttäjänimi jolle tallennetaan muuttamasi hintatiedot");
+        System.out.println("4 Tallenna muuttamasi hintatiedot olemassa olevalle käyttäjänimellesi");
+        System.out.println("5 Lataa tallennetut hintatietosi käyttäjänimesi avulla");
+        System.out.println("6 Poista käyttäjänimesi tiedot");
         System.out.println("10 Muuta sähköenergian hintaa");
         System.out.println("11 Muuta sähkön siirtohintaa");
         System.out.println("20 Muuta polttopuun hintaa");
@@ -146,9 +157,10 @@ public class UserInterface {
         System.out.println("40 Muuta ilmalämpöpumpun hyötysuhdetta");
         System.out.println("x Lopeta ohjelma");
     }
+
     /**
      * Metodi kertoo onko käyttäjän syöte oikeaa tyyppiä (double).
-     * 
+     *
      * @return true jos syöte on double tyyppiä
      */
     public boolean checkInputType() {
@@ -160,26 +172,56 @@ public class UserInterface {
         String cleaningAway = scanner.nextLine();
         return false;
     }
-    
+
     /**
      * Tulostaa ruudulle lämmitysmuotojen hinnat per kWh.
      */
     public void printPrices() {
-
+        DecimalFormat df = new DecimalFormat("#.####");
         Double ePrice = electric.countEnergyPrice();
-        System.out.println("kWh-hinta polttopuulla: " + wood.countEnergyPrice() + " senttiä");
-        System.out.println("kWh-hinta sähköllä: " + ePrice + " senttiä");
-        System.out.println("kWh-hinta öljyllä: " + oil.countEnergyPrice() + " senttiä");
-        System.out.println("kWh-hinta ilmalämpöpumpulla: " + pump.countEnergyPrice(ePrice) + " senttiä");
+        System.out.println("");
+        System.out.println("Lämmitysenergian hinnat ovat seuraavat.");
+        System.out.println("Polttopuulla: " + df.format(wood.countEnergyPrice()) + " senttiä per kWh");
+        System.out.println("Sähköllä: " + df.format(ePrice) + " senttiä per kWh");
+        System.out.println("Öljyllä: " + df.format(oil.countEnergyPrice()) + " senttiä per kwh");
+        System.out.println("Ilmalämpöpumpulla: " + df.format(pump.countEnergyPrice(ePrice)) + " senttiä per kWh");
+        System.out.println("Edullisin lämmitysmuoto tällä hetkellä on: " + countCheapest() + "!");
+    }
+    
+    /**
+     * 
+     * Metodi vertailee mikä on halvin lämmitysmuoto
+     * @return palauttaa halvimman lämmitysmuodon
+     */
+    public String countCheapest() {
+        double e = electric.countEnergyPrice();
+        double w = wood.countEnergyPrice();
+        double o = oil.countEnergyPrice();
+        double p = pump.countEnergyPrice(e);
+
+        if (p < e && p < w && p < o) {
+            return "ILMALÄMPÖPUMPPU";
+        } else if (e < w && e < o) {
+            return "SÄHKÖ";
+        } else if (w < o) {
+            return "POLTTOPUU";
+        } else {
+            return "ÖLJY";
+        }
     }
 
     /**
      * Tallentaa käyttäjän nimen ja hintatiedot pysyväismuistiin tietokantaan.
-     * @throws SQLException 
+     *
+     * @throws SQLException
      */
     public void saveData() throws SQLException {
         System.out.println("Anna käyttäjänimi jolla hintatietosi tallennetaan: ");
         String name = scanner.nextLine();
+        if (name.isEmpty() || name.length() > 100) {
+            System.out.println("Valitse käyttäjänimi jossa on 1-100 merkkiä, kiitos.");
+            return;
+        }
         if (!dao.check(name)) {
             User user = new User(name, electric.getPrice(), electric.getTransferPrice(), wood.getPrice(), wood.getEfficiency(), wood.getEnergyContent(), oil.getPrice(), oil.getEfficiency(), oil.getEnergyContent(), pump.getEfficiency());
             dao.create(user);
@@ -189,9 +231,47 @@ public class UserInterface {
         }
 
     }
+    
+    /**
+     * Päivittää vanhalle käyttäjänimelle uudet hintatiedot pysyväismuistiin
+     * 
+     * @throws SQLException 
+     */
+    public void updateData() throws SQLException {
+        System.out.println("Anna käyttäjänimi jolle hintatietosi päivitetään: ");
+        String name = scanner.nextLine();
+
+        if (dao.check(name)) {
+            User user = new User(name, electric.getPrice(), electric.getTransferPrice(), wood.getPrice(), wood.getEfficiency(), wood.getEnergyContent(), oil.getPrice(), oil.getEfficiency(), oil.getEnergyContent(), pump.getEfficiency());
+            dao.update(user);
+            System.out.println("Kiitos " + name + ", hintatietosi on nyt päivitetty.");
+        } else {
+            System.out.println("Käyttäjänimeä " + name + " ei löytynyt. Valitse toinen käyttäjänimi kiitos!");
+        }
+
+    }
+    
+    /**
+     * Poistaa käyttäjän ja tämän tiedot pysyväismuistista.
+     * 
+     * @throws SQLException 
+     */
+    public void deleteUserData() throws SQLException {
+        System.out.println("Anna käyttäjänimi jonka haluat poistaa: ");
+        String name = scanner.nextLine();
+
+        if (dao.check(name)) {
+            dao.delete(name);
+            System.out.println("Kiitos " + name + ",tietosi on nyt poistettu.");
+        } else {
+            System.out.println("Käyttäjänimeä " + name + " ei löytynyt. Valitse toinen käyttäjänimi kiitos!");
+        }
+
+    }
 
     /**
      * Lataa käyttäjän hintatiedot pysyväismuistista tietokannasta.
+     *
      * @throws SQLException
      */
     public void loadData() throws SQLException {
