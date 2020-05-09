@@ -2,10 +2,12 @@
 
 Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaan useammalla lämmönlähteellä. Sovelluksen avulla käyttäjä voi laskea edullisimman lämmitysmuodon, eli esim. onko tänään kannattavampaa polttaa puita takassa vai käyttää sähköä. Tai tuleeko kevään 2020 hinnoilla kenties halvimmaksi polttaa öljyä?
 
-### Release viikko 5 ja 6
+### Releaset
 [Viikon 5 release](https://github.com/armijuha/ot-harjoitustyo/releases/tag/viikko5)
 
 [Viikon 6 release](https://github.com/armijuha/ot-harjoitustyo/releases/tag/viikko6)
+
+[Lopullinen release](https://github.com/armijuha/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ### Dokumentaatio
 
