@@ -18,5 +18,8 @@ päivä | aika [h] | mitä tein
 25.4.2020 | 4 | testikattavuuden parantaminen, uniikit käyttäjätunnukset
 26.4.2020 | 3 | JavaDoc kommentointi ja ongelmien selvitys
 27.4.2020 | 2 | alustava arkkitehtuurikuvaus ja käyttöohje
+7.5.2020  | 3 | tietokannan toimintojen lisäys ja parantaminen
+8.5.2020  | 3 | käyttöliittymän viilaus, testien kirjoitus tietokantatoiminnoille
+9.5.2020  | 2 | määrittelydokumentin päivitys, testaus ja bugin korjaus, loppupalautuksen julkaisu
 
-summa 51 tuntia
+summa 56 tuntia
