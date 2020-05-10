@@ -17,4 +17,9 @@ Pakkauksen fi.lammitysmuotolaskuri.dao luokkaa UserDao testaa UserDaoTest, joka 
 
 ### Testauskattavuus
 
+Sovelluslogiikan testauksen rivikattavuus on 86% ja haarutumakattavuus 75%. DAO:n testauksen rivikattavuus on 92% ja haarautumakattavuus 75%.
 ![](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/testauskattavuus.png)
+
+## Järjestelmätestaus
+
+Lämmitysmuotolaskurin järjestelmätestausta on tehty manuaalisesti ja melko runsaasti. Kaikkia määrittelydokumentissa mainittuja ominaisuuksia on testattu oikeilla ja väärillä syötteillä. Sovellus tunnistaa väärän tyyppiset, tyhjät tai liian pitkät syötteet, eikä anna tehdä kahta samannimistä käyttäjää samaan aikaan pysyväistallennukseen. Tiedossa ei ole laatuongelmia näiden ominaisuuksien suhteen.
