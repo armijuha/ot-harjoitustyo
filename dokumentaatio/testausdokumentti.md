@@ -17,7 +17,7 @@ Pakkauksen fi.lammitysmuotolaskuri.dao luokkaa UserDao testaa UserDaoTest, joka 
 
 ### Testauskattavuus
 
-Sovelluslogiikan testauksen rivikattavuus on 86% ja haarutumakattavuus 75%. DAO:n testauksen rivikattavuus on 92% ja haarautumakattavuus 75%.
+Sovelluslogiikan testauksen rivikattavuus on 86% ja haarutumakattavuus 75%. DAO:n testauksen rivikattavuus on 92% ja haarautumakattavuus 75%. Käyttöliittymän toiminta on testattu manuaalisesti.
 ![](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/testauskattavuus.png)
 
 ## Järjestelmätestaus
