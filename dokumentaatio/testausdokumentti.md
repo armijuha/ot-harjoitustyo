@@ -22,4 +22,4 @@ Sovelluslogiikan testauksen rivikattavuus on 86% ja haarutumakattavuus 75%. DAO:
 
 ## Järjestelmätestaus
 
-Lämmitysmuotolaskurin järjestelmätestausta on tehty manuaalisesti ja melko runsaasti. Kaikkia määrittelydokumentissa mainittuja ominaisuuksia on testattu oikeilla ja väärillä syötteillä. Sovellus tunnistaa väärän tyyppiset, tyhjät tai liian pitkät syötteet, eikä anna tehdä kahta samannimistä käyttäjää samaan aikaan pysyväistallennukseen. Tiedossa ei ole laatuongelmia näiden ominaisuuksien suhteen.
+Lämmitysmuotolaskurin järjestelmätestausta on tehty manuaalisesti ja melko runsaasti. Kaikkia määrittelydokumentissa mainittuja ominaisuuksia on testattu oikeilla ja väärillä syötteillä. Sovellus tunnistaa väärän tyyppiset, tyhjät tai liian pitkät syötteet, eikä anna tehdä kahta samannimistä käyttäjää samaan aikaan pysyväistallennukseen. Tiedossa ei ole laatuongelmia näiden ominaisuuksien suhteen. Automaattisia testejä voisi lisätä testaamaan nyt manuaalisesti tehtyjä testejä.
