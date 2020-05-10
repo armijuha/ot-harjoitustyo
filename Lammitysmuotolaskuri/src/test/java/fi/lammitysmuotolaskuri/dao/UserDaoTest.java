@@ -42,7 +42,7 @@ public class UserDaoTest {
 
     @Before
     public void setUp() throws SQLException {
-        Connection conn = DriverManager.getConnection("jdbc:h2:./lammitysmuototietokanta", "sa", "");
+        Connection conn = DriverManager.getConnection("jdbc:h2:./testitietokanta", "sa", "");
         try {
             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Lammitysmuoto");
             stmt.execute();

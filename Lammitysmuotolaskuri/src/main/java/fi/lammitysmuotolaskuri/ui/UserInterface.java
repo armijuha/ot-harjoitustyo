@@ -187,10 +187,11 @@ public class UserInterface {
         System.out.println("Ilmalämpöpumpulla: " + df.format(pump.countEnergyPrice(ePrice)) + " senttiä per kWh");
         System.out.println("Edullisin lämmitysmuoto tällä hetkellä on: " + countCheapest() + "!");
     }
-    
+
     /**
-     * 
+     *
      * Metodi vertailee mikä on halvin lämmitysmuoto
+     *
      * @return palauttaa halvimman lämmitysmuodon
      */
     public String countCheapest() {
@@ -231,11 +232,11 @@ public class UserInterface {
         }
 
     }
-    
+
     /**
      * Päivittää vanhalle käyttäjänimelle uudet hintatiedot pysyväismuistiin
-     * 
-     * @throws SQLException 
+     *
+     * @throws SQLException
      */
     public void updateData() throws SQLException {
         System.out.println("Anna käyttäjänimi jolle hintatietosi päivitetään: ");
@@ -250,11 +251,11 @@ public class UserInterface {
         }
 
     }
-    
+
     /**
      * Poistaa käyttäjän ja tämän tiedot pysyväismuistista.
-     * 
-     * @throws SQLException 
+     *
+     * @throws SQLException
      */
     public void deleteUserData() throws SQLException {
         System.out.println("Anna käyttäjänimi jonka haluat poistaa: ");
@@ -281,10 +282,17 @@ public class UserInterface {
             User user = dao.read(name);
             System.out.println("Kiitos " + name + ", hintatietosi on nyt haettu.");
             electric.setPrice(user.getElectricPrice());
+            electric.setTransferPrice(user.getElectricTransferPrice());
+            wood.setPrice(user.getWoodPrice());
+            wood.setEfficiency(user.getWoodEfficiency());
+            wood.setEnergyContent(user.getWoodEnergyContent());
+            oil.setPrice(user.getOilPrice());
+            oil.setEfficiency(user.getOilEfficiency());
+            oil.setEnergyContent(user.getOilEnergyContent());
+            pump.setEfficiency(user.getPumpEfficiency());
             printPrices();
         } else {
             System.out.println("Käyttäjänimeä ei löytynyt, tarkista käyttäjänimi ja yritä uudelleen, kiitos.");
         }
-
     }
 }
