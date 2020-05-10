@@ -25,3 +25,16 @@ Alla kuvattuna parin päätoiminnallisuuden logiikka sekvenssikaavioiden avulla.
 ![](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssi%201.png)
 
 Käyttäjä haluaa muuttaa sähkön hintaa ja antaa käskyn "10" jolloin käyttöliittymä pyytää käyttäjäjältä uuden hinnan ja kutsuu ElectricHeating -luokan metodia setPrice joka muuttaa sähkön hinnan. Vastaavasti käskyllä "21" käyttöliittymä kutsuu luokan Firewood metodia setEfficiency, joka muuttaa polttopuun hyötysuhteen käyttäjän antaman syötteen mukaiseksi.
+
+![](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssi%202.png)
+
+Käyttäjä haluaa tallentaa omat hintatietonsa pysyväismuistiin uudelle käyttäjänimelle ja antaa tätä vastaavan käskyn "3".
+Nyt käyttöliittymä kutsuu UserDao:a joka tarkistaa löytyykö käyttäjän antamaa käyttäjänimeä ennestään tietokannasta. Jos ei löydy niin käyttöliittymä tekee uuden käyttäjän jonka UserDao tallentaa tietokantaan. Tietojen päivitys ja haku tietokannasta toimii vastaavalla periaatteella.
+
+## Sovelluksen rakenteen tunnistetut heikkoudet
+
+### Logiikan ja käyttöliittymän totaalinen erotus
+Logiikka ja käyttöliittymä on erotettu toisistaan jo aikaisessa vaiheessa ohjelman tekoa, mutta tämän jälkeen käyttöliittyän puolelle on huomaamatta tullut monta uutta metodia jotka sopisivat paremmin logiikan puolelle.
+
+### käyttöliittymä
+Käyttöliittymä on täysin tekstimuotoinen. Graafinen käyttöliittymä voisi hyvin toteutettuna tehdä ohjelmasta helposti ymmärrettävän ja mukavan käyttää.
