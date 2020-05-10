@@ -17,7 +17,7 @@ Sovellus on suunnattu omakotiasujalle, jolla on mahdollisuus lämmittää taloaa
 
 [Käyttöohje](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
-[Testausdokumentti] (https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
+[Testausdokumentti] (https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/testausdokumentti.md)
 
 [Työaikakirjanpito](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
