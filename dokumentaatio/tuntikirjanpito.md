@@ -21,5 +21,6 @@ päivä | aika [h] | mitä tein
 7.5.2020  | 3 | tietokannan toimintojen lisäys ja parantaminen
 8.5.2020  | 3 | käyttöliittymän viilaus, testien kirjoitus tietokantatoiminnoille
 9.5.2020  | 2 | määrittelydokumentin päivitys, testaus ja bugin korjaus, loppupalautuksen julkaisu
+10.5.2020 | 2 | testausdokumentti, käyttöohjeen päivitys, sekvenssikaavioiden päivitys arkkitehtuuriin
 
-summa 56 tuntia
+summa 62 tuntia
