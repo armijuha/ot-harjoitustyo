@@ -17,4 +17,4 @@ Pakkauksen fi.lammitysmuotolaskuri.dao luokkaa UserDao testaa UserDaoTest, joka 
 
 ### Testauskattavuus
 
-![](https://github.com/armijuha/ot-harjoitustyo/blob/master/testauskattavuus.png)
+![](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/testauskattavuus.png)
