@@ -34,7 +34,7 @@ Nyt käyttöliittymä kutsuu UserDao:a joka tarkistaa löytyykö käyttäjän an
 ## Sovelluksen rakenteen tunnistetut heikkoudet
 
 ### Logiikan ja käyttöliittymän totaalinen erotus
-Logiikka ja käyttöliittymä on erotettu toisistaan jo aikaisessa vaiheessa ohjelman tekoa, mutta tämän jälkeen käyttöliittyän puolelle on huomaamatta tullut monta uutta metodia jotka sopisivat paremmin logiikan puolelle.
+Logiikka ja käyttöliittymä on erotettu toisistaan jo aikaisessa vaiheessa ohjelman tekoa, mutta tämän jälkeen käyttöliittymän puolelle on huomaamatta tullut monta uutta metodia jotka sopisivat paremmin logiikan puolelle. 
 
 ### käyttöliittymä
 Käyttöliittymä on täysin tekstimuotoinen. Graafinen käyttöliittymä voisi hyvin toteutettuna tehdä ohjelmasta helposti ymmärrettävän ja mukavan käyttää.
