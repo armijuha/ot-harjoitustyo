@@ -16,10 +16,8 @@ Sovelluslogiikka muodostuu luokista User, ElectricHeating, Firewood, Oil ja AirH
 ## Tietojen pysyväistallennus
 Luokka UserDao hoitaa tietojen tallennuksen tietokantaan. Koska luokka noudattaa Data Access Object -suunnittelumallia, voidaan se korvata toisella toteutuksella mikäki datan tallennustapaa tarvitsee vaihtaa.
 Sovellus käyttää tietokantaa nimeltä Lammitysmuototietokanta, jonka rakenne voidaan nähdä tietokannan muodostavasta SQL käskystä alla: 
-> CREATE TABLE Lammitysmuoto (id serial, name varchar(255), electricprice numeric(9,4), electrictransferprice numeric(9,4),"
-                    + " woodprice numeric(9,4), woodefficiency numeric(9,4), woodenergycontent numeric(9,4), oilprice numeric(9,4), oilefficiency numeric(9,4),"
-                    + " oilenergycontent numeric(9,4), pumpefficiency numeric (9,4));"
+> CREATE TABLE Lammitysmuoto (id serial, name varchar(255), electricprice numeric(9,4), electrictransferprice numeric(9,4), woodprice numeric(9,4), woodefficiency numeric(9,4), woodenergycontent numeric(9,4), oilprice numeric(9,4), oilefficiency numeric(9,4), oilenergycontent numeric(9,4), pumpefficiency numeric (9,4));"
 
 ## Päätoiminnallisuudet
 ### Sekvenssikaavio
-![](https://www.websequencediagrams.com/?png=msc761947722)
+![](https://github.com/armijuha/ot-harjoitustyo/blob/master/dokumentaatio/sekvenssi%201.png)
