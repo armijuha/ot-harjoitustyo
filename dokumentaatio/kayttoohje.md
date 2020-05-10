@@ -2,8 +2,6 @@
 
 Lataa seuraava tiedosto: [Lammitysmuotolaskuri-1.0-SNAPSHOT.jar](https://github.com/armijuha/ot-harjoitustyo/releases/tag/loppupalautus)
 
-## Konfigurointi
-
 ## Ohjelman käynnistäminen
 
 Ohjelma käynnistetään komennolla
